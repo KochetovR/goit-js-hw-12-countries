@@ -1,0 +1,63 @@
+/*
+ * Главный файл стилей.
+ * Все паршалы подключаются сюда.
+ */
+
+// Стили для файла с примером HTML-фрагмента
+@import './example';
+
+body {
+    background-image: url('../images/double-bubble.png');
+}
+
+.content__box {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.content__input {
+    padding-left: 5px;
+    border: 2px solid;
+    border-radius: 4px;
+
+    width: 600px;
+
+    color: black;
+    font-size: 18px;
+    // font-weight: bold;
+
+    &::placeholder {
+        color: black;
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
+
+
+.pnotify-pre-line {
+    font-size: 30px;
+    color: red;
+}
+
+
+
+// country info
+
+.country__main-box {
+    width: 600px;
+}
+
+.country__title {
+    display: flex;
+    justify-content: center;
+}
+
+.country__info-box {
+    display: flex;
+    align-items: flex-start;
+}
+
+.country__flag-box {
+    margin-left: auto;
+}
+
