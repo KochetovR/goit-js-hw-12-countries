@@ -7,20 +7,20 @@ import countryList from './template/country-list.hbs';
 
 var debounce = require('lodash.debounce');
 
-let urlCountry = 'https://restcountries.eu/rest/v2'
 const boxInfo = document.querySelector('.js-box')
 const searchInput = document.querySelector('.js-input')
-const listCountry = document.querySelector('.js-list')
 
-searchInput.addEventListener('input', debounce(() => {
-    if(searchInput.value.length>0) {
-    urlCountry = `https://restcountries.eu/rest/v2/name/${searchInput.value}`
-    makeSearchCountry(urlCountry) 
+searchInput.addEventListener('input', debounce((e) => {
+
+    if(searchInput.value.length===0) {
+        boxInfo.innerHTML = ' ';
+    }
+
+    if(searchInput.value.length > 0) {
+        const urlCountry = `https://restcountries.eu/rest/v2/name/${searchInput.value}`
+        makeSearchCountry(urlCountry)
     }},500),
-
 )
-
-
 
 function makeSearchCountry (url) {
     fetch(url).then(response => {
