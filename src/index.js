@@ -10,14 +10,11 @@ var debounce = require('lodash.debounce');
 const boxInfo = document.querySelector('.js-box')
 const searchInput = document.querySelector('.js-input')
 
-searchInput.addEventListener('input', debounce((e) => {
-
-    if(searchInput.value.length===0) {
-        boxInfo.innerHTML = ' ';
-    }
-
-    if(searchInput.value.length > 0) {
-        const urlCountry = `https://restcountries.eu/rest/v2/name/${searchInput.value}`
+searchInput.addEventListener('input', debounce(() => {
+    const nameCountry = searchInput.value.trim()
+    boxInfo.innerHTML='';
+    if(nameCountry!=='') {
+        const urlCountry = `https://restcountries.eu/rest/v2/name/${nameCountry}`
         makeSearchCountry(urlCountry)
     }},500),
 )
