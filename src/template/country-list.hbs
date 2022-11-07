@@ -1,5 +1,9 @@
 <ul class="js-list">
     {{#each []}}
-    <li>{{this.name}}</li>
+    <li class="js-list__item" data-name="{{name.common}}">
+        <img src="{{flags.png}}" alt="{{name.common}}" class="js-list__flag"
+            width="50px" height="30px">
+        <span>{{this.name.common}}</span>
+    </li>
     {{/each}}
 </ul>

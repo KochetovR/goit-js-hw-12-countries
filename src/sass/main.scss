@@ -61,3 +61,31 @@ body {
     margin-left: auto;
 }
 
+// counties lsit
+.js-list {
+    list-style: none;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        width: 350px;
+        height: 40px;
+        padding: 5px 5px 5px 8px;
+        border: 1px solid #1ad809;
+        border-radius: 14px;
+        font-size: 20px;
+        font-weight: 700;
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        &:hover {
+            transform: scale(1.07);
+            cursor: pointer;
+            background-color: rgba(231, 213, 111, 0.3);
+        }
+    }
+
+    &__flag {
+        margin-right: 5px;
+    }
+}
