@@ -2,18 +2,18 @@
     <h1 class="country__title">{{name.common}}</h1>
     <div class="country__info-box">
         <div>
-            <p>Capital:{{capital}}</p>
-            <p>Population:{{population}}</p>
-            <p>Languages:{{languages.name}}</p>
-            <ul>
+            <p>Capital: <span>{{capital}}</span></p>
+            <p>Population: <span>{{population}}</span></p>
+            <p>Languages: <span>{{languages.name}}</span></p>
+            <ol class="ln-list">
                 {{#each languages}}
                     <li>{{this}}</li>
                 {{/each}}
-            </ul>
+            </ol>
         </div>
         <div class="country__flag-box">
             <img src="{{flags.png}}" alt="{{name}}" 
-            width="350px" height="250px">
+            width="200px" height="auto">
         </div>
     </div>
     

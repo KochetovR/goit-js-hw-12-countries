@@ -10,29 +10,29 @@ body {
     background-image: url('../images/double-bubble.png');
 }
 
-.content__box {
-    margin-top: 15px;
-    margin-left: 15px;
-}
-
 .content__input {
+    display: block;
+    width: 450px;
+    height: 40px;
+    margin: 200px auto 0;
     padding-left: 5px;
-    border: 2px solid;
-    border-radius: 4px;
-
-    width: 600px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
 
     color: black;
     font-size: 18px;
-    // font-weight: bold;
+    font-weight: bold;
 
     &::placeholder {
-        color: black;
-        font-size: 18px;
-        font-weight: bold;
+        color: rgb(138, 135, 135);
+    }
+    &:focus {
+        outline: none;
     }
 }
-
 
 .pnotify-pre-line {
     font-size: 30px;
@@ -44,48 +44,74 @@ body {
 // country info
 
 .country__main-box {
-    width: 600px;
+    width: 450px;
+    margin-top: 10px;
+    padding: 7px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
 }
 
 .country__title {
     display: flex;
     justify-content: center;
+    margin-top: 0;
 }
 
 .country__info-box {
     display: flex;
     align-items: flex-start;
+    & p{
+        margin: 10px 0;
+        font-size: 20px;
+    }
+    & span {
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+.ln-list {
+    margin: 0;
+    padding: 0;
+        padding-left: 16px;
 }
 
 .country__flag-box {
     margin-left: auto;
 }
 
-// counties lsit
+// counties list
+.js-box {
+    width: 450px;
+    margin: 0 auto;
+}
 .js-list {
     list-style: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 6px 6px 0 rgba(32, 33, 36, .28);
+    border-radius: 14px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #fff;
 
     &__item {
         display: flex;
         align-items: center;
-        width: 350px;
+        justify-content: space-between;
         height: 40px;
-        padding: 5px 5px 5px 8px;
-        border: 1px solid #1ad809;
-        border-radius: 14px;
+        padding: 5px 10px 5px;
         font-size: 20px;
         font-weight: 700;
         &:not(:last-child) {
             margin-bottom: 10px;
         }
         &:hover {
-            transform: scale(1.07);
-            cursor: pointer;
-            background-color: rgba(231, 213, 111, 0.3);
+            background-color: #ccc;
         }
     }
 
     &__flag {
-        margin-right: 5px;
+        margin-left: 5px;
     }
 }
